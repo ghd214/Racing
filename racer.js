@@ -227,9 +227,15 @@ Racer.Track = function() {
         var svg = document.getElementById('track');
         var layer = new Layer();
 
-        _path = layer.importSVG(svg).firstChild;
-        _path.strokeColor = '#ECBB62';
-        _path.strokeWidth = 12;
+
+        var p = layer.importSVG(svg, function(path,svg){
+          
+             path.strokeColor = '#ECBB62';
+             path.strokeWidth = 12;
+
+             _path = path.children['circuit'];
+
+        });
 
         paper.view.draw();
     }
