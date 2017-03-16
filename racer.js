@@ -267,7 +267,8 @@ Racer.Car = function (path, acceleration, friction, speed, sliding_friction) {
     var _in=true;
 
     function initPosition(){
-         _rotationExit=0;
+        
+        _rotationExit=0;
         _elapsedExit=0;
 
         _rotation = 0;
@@ -278,7 +279,6 @@ Racer.Car = function (path, acceleration, friction, speed, sliding_friction) {
 
         _position = _path.getPointAt(_elapsed);
         
-       // _velocity.length = 0.15;
         renderCar(_position);
     }
 
