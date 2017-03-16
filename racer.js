@@ -135,12 +135,14 @@ Racer.Game=(function(){
         TweenMax.to("div.lifes", .6, {ease:Cubic.easeInOut, left:-20});
     }
 
-    function accelerate(){
+    function accelerate(e){
         _car.accelerate();
+        e.preventDefault();
     }
 
-    function brake(){
+    function brake(e){
         _car.brake();
+        e.preventDefault();
     }
 
      function addListener(){
